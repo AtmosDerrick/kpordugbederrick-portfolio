@@ -107,9 +107,12 @@ export const profile = {
       "Backend engineering",
       "System integration",
       "Service architecture",
-      "Product workflows",
+      "NodeJs",
+      "Django",
+      "ExpressJs",
+      "FastApi",
     ],
-    Languages: ["JavaScript", "TypeScript", "HTML", "CSS"],
+    Languages: ["JavaScript", "TypeScript", "HTML", "CSS", "Python"],
     Databases: [
       "Relational databases",
       "Data modeling",
@@ -129,6 +132,7 @@ export const profile = {
       "AI integration",
       "Fintech systems",
       "Engineering process",
+      "Graphic Design",
     ],
   },
   approach: [
