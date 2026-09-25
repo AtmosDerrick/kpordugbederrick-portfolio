@@ -79,6 +79,20 @@ export const profile = {
     "AI Integration",
     "Backend & API Architecture",
   ],
+  featuredProduct: {
+    name: "Mnemos",
+    type: "Full-stack developer",
+    website: "https://mnemosmed.com/",
+    tagline: "Medical Education Beyond the Classroom",
+    description:
+      "An edtech platform built for medical education, delivering structured learning experiences around lecture content and AI-assisted study companion workflows.",
+    highlights: [
+      "AI video transcription for lecture content",
+      "AI chat with lecture video context",
+      "AI chat streaming integration",
+      "Payment integration",
+    ],
+  },
   skills: {
     Frontend: [
       "JavaScript",

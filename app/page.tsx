@@ -102,10 +102,50 @@ export default function Home() {
 
         <section className="border-t border-stone-200 py-20" id="work">
           <SectionHeading
-            eyebrow="Engineering Focus"
-            title="Systems, platform thinking, and implementation depth."
-            description="The work blends product delivery, infrastructure, automation, and architecture into reliable engineering outcomes."
+            eyebrow="Selected Engineering Work"
+            title="Product work with practical delivery impact."
+            description="A focused example of engineering work built around product experience, AI workflows, and scalable system integration."
           />
+
+          <div className="mt-10 border border-stone-200 bg-stone-100/40 p-6 sm:p-8">
+            <div className="flex flex-col gap-4 border-b border-stone-200 pb-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-stone-500">
+                  {profile.featuredProduct.type}
+                </p>
+                <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-stone-900">
+                  {profile.featuredProduct.name}
+                </h3>
+              </div>
+              <a
+                href={profile.featuredProduct.website}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-stone-600 transition-colors hover:text-stone-900"
+              >
+                {profile.featuredProduct.website}
+              </a>
+            </div>
+
+            <p className="mt-5 text-lg font-medium tracking-[-0.03em] text-stone-900">
+              {profile.featuredProduct.tagline}
+            </p>
+            <p className="mt-3 max-w-3xl text-base leading-7 text-stone-600">
+              {profile.featuredProduct.description}
+            </p>
+
+            <ul className="mt-6 space-y-3 text-base leading-7 text-stone-700">
+              {profile.featuredProduct.highlights.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span
+                    className="mt-2 h-1.5 w-1.5 flex-none bg-stone-900"
+                    aria-hidden="true"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {profile.focusAreas.map((area) => (
