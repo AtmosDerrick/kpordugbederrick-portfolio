@@ -79,20 +79,31 @@ export const profile = {
     "AI Integration",
     "Backend & API Architecture",
   ],
-  featuredProduct: {
-    name: "Mnemos",
-    type: "Full-stack developer",
-    website: "https://mnemosmed.com/",
-    tagline: "Medical Education Beyond the Classroom",
-    description:
-      "An edtech platform built for medical education, delivering structured learning experiences around lecture content and AI-assisted study companion workflows.",
-    highlights: [
-      "AI video transcription for lecture content",
-      "AI chat with lecture video context",
-      "AI chat streaming integration",
-      "Payment integration",
-    ],
-  },
+  featuredProducts: [
+    {
+      name: "Mnemos",
+      type: "Full-stack developer",
+      website: "https://mnemosmed.com/",
+      tagline: "Medical Education Beyond the Classroom",
+      description:
+        "An edtech platform built for medical education, delivering structured learning experiences around lecture content and AI-assisted study companion workflows.",
+      highlights: [
+        "AI video transcription for lecture content",
+        "AI chat with lecture video context",
+        "AI chat streaming integration",
+        "Payment integration",
+      ],
+    },
+    {
+      name: "Kpentag Digital",
+      type: "Full Stack Developer",
+      website: "https://www.kpentagdigital.com/",
+      tagline: "Payment Processing & Payment Gateway",
+      description:
+        "A digital payment platform focused on payment processing and payment gateway services.",
+      highlights: ["Payment processing", "Payment gateway"],
+    },
+  ],
   skills: {
     Frontend: [
       "JavaScript",

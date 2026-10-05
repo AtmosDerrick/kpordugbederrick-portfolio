@@ -104,47 +104,54 @@ export default function Home() {
           <SectionHeading
             eyebrow="Selected Engineering Work"
             title="Product work with practical delivery impact."
-            description="A focused example of engineering work built around product experience, AI workflows, and scalable system integration."
+            description="Selected products across education technology and digital payments."
           />
 
-          <div className="mt-10 border border-stone-200 bg-stone-100/40 p-6 sm:p-8">
-            <div className="flex flex-col gap-4 border-b border-stone-200 pb-5 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-stone-500">
-                  {profile.featuredProduct.type}
-                </p>
-                <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-stone-900">
-                  {profile.featuredProduct.name}
-                </h3>
-              </div>
-              <a
-                href={profile.featuredProduct.website}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm text-stone-600 transition-colors hover:text-stone-900"
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {profile.featuredProducts.map((product) => (
+              <article
+                key={product.name}
+                className="border border-stone-200 bg-stone-100/40 p-6 sm:p-8"
               >
-                {profile.featuredProduct.website}
-              </a>
-            </div>
+                <div className="flex flex-col gap-4 border-b border-stone-200 pb-5">
+                  <div>
+                    <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-stone-500">
+                      {product.type}
+                    </p>
+                    <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-stone-900">
+                      {product.name}
+                    </h3>
+                  </div>
+                  <a
+                    href={product.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="break-all text-sm text-stone-600 transition-colors hover:text-stone-900"
+                  >
+                    {product.website}
+                  </a>
+                </div>
 
-            <p className="mt-5 text-lg font-medium tracking-[-0.03em] text-stone-900">
-              {profile.featuredProduct.tagline}
-            </p>
-            <p className="mt-3 max-w-3xl text-base leading-7 text-stone-600">
-              {profile.featuredProduct.description}
-            </p>
+                <p className="mt-5 text-lg font-medium tracking-[-0.03em] text-stone-900">
+                  {product.tagline}
+                </p>
+                <p className="mt-3 text-base leading-7 text-stone-600">
+                  {product.description}
+                </p>
 
-            <ul className="mt-6 space-y-3 text-base leading-7 text-stone-700">
-              {profile.featuredProduct.highlights.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span
-                    className="mt-2 h-1.5 w-1.5 flex-none bg-stone-900"
-                    aria-hidden="true"
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+                <ul className="mt-6 space-y-3 text-base leading-7 text-stone-700">
+                  {product.highlights.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span
+                        className="mt-2 h-1.5 w-1.5 flex-none bg-stone-900"
+                        aria-hidden="true"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
