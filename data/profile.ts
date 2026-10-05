@@ -111,6 +111,7 @@ export const profile = {
       "Django",
       "ExpressJs",
       "FastApi",
+      ".NET",
     ],
     Languages: ["JavaScript", "TypeScript", "HTML", "CSS", "Python"],
     Databases: [
